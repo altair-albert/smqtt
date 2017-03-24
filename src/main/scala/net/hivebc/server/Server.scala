@@ -32,11 +32,11 @@ class Server {
 
 
 object Server {
-  val log = Logger(classOf[Server])
+  private val logger = Logger(classOf[Server])
 
   def main(args: Array[String]) {
-    log.info("Server Start!")
+    logger.info("Server Start!")
     val server = new Server
-    server.bind(1235)
+    server.bind(1883)
   }
 }
